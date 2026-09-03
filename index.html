@@ -928,6 +928,45 @@
  .resume-item,.project-resume,.skill-line,.education-card{break-inside:avoid}
  .terminal,.btn-row,.badge-row{display:none}
 }
+
+
+.bottom-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+}
+
+.bottom-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 15px 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  color: var(--text);
+  background: var(--surface);
+  transition: border-color .2s ease, transform .2s ease, background .2s ease;
+}
+
+.bottom-contact-item:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+.bottom-contact-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--pass);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+@media (max-width: 760px) {
+  .bottom-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -1056,14 +1095,33 @@
       <div class="education-year">2023 – 2026</div>
     </div>
   </section>
-<div class="contact-stack">
-      <a href="tel:+918103615769">+91 8103615769</a>
-      <a href="mailto:rajsoni968392@gmail.com">rajsoni968392@gmail.com</a>
-      <a href="https://therajsoni.github.io/rajsoni.portfolio.dev/" target="_blank">therajsoni.github.io/rajsoni-portfolio</a>
-      <a href="https://github.com/therajsoni" target="_blank">github.com/therajsoni</a>
-      <a href="https://www.linkedin.com/in/raj-soni-256b333b0/" target="_blank">linkedin.com/in/raj-soni-256b333b0</a>
+
+  <section class="resume-section bottom-contact" id="contact">
+    <div class="resume-section-title"><span class="idx">05</span><h2>contact.connect</h2></div>
+    <div class="bottom-contact-grid">
+      <a href="tel:+918103615769" class="bottom-contact-item">
+        <span class="bottom-contact-label">phone</span>
+        <span>+91 8103615769</span>
+      </a>
+      <a href="mailto:rajsoni968392@gmail.com" class="bottom-contact-item">
+        <span class="bottom-contact-label">email</span>
+        <span>rajsoni968392@gmail.com</span>
+      </a>
+      <a href="https://therajsoni.github.io/rajsoni.portfolio.dev/" target="_blank" rel="noopener" class="bottom-contact-item">
+        <span class="bottom-contact-label">portfolio</span>
+        <span>therajsoni.github.io/rajsoni-portfolio</span>
+      </a>
+      <a href="https://github.com/therajsoni" target="_blank" rel="noopener" class="bottom-contact-item">
+        <span class="bottom-contact-label">github</span>
+        <span>github.com/therajsoni</span>
+      </a>
+      <a href="https://www.linkedin.com/in/raj-soni-256b333b0/" target="_blank" rel="noopener" class="bottom-contact-item">
+        <span class="bottom-contact-label">linkedin</span>
+        <span>linkedin.com/in/raj-soni-256b333b0</span>
+      </a>
     </div>
-      
+  </section>
+
   <footer class="resume-footer">
     <span>build passed ● raj@soni</span>
     <span>© 2026 Raj Soni</span>
